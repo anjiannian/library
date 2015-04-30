@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'books',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,6 +63,7 @@ DATABASES = {
         'NAME': 'library',
         'USER': 'nobody',
         'HOST': '127.0.0.1',
+        'PASSWORD': 'hell0',
         'PORT': '3306',
     }
 }
