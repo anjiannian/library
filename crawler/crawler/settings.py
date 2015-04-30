@@ -14,10 +14,10 @@ SPIDER_MODULES = ['crawler.spiders']
 NEWSPIDER_MODULE = 'crawler.spiders'
 
 ITEM_PIPELINES = {
-    'crawler.pipelines.MySQLdb': 301,
+    'crawler.pipelines.MySQLPipeline': 301,
 }
 
-DOWNLOAD_DELAY = 5
+DOWNLOAD_DELAY = 3
 RANDOMIZE_DOWNLOAD_DELAY = True
 
 
@@ -32,3 +32,8 @@ DEFAULT_REQUEST_HEADERS = {
     "Connection": "keep-alive",
     "X-Requested-With": "XMLHttpRequest",
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/36.0.1985.125 Chrome/36.0.1985.125 Safari/537.36"}
+
+MYSQL_DB = 'library'
+MYSQL_SERVER = '127.0.0.1'
+MYSQL_USER = 'nobody'
+MYSQL_PASSWD = 'hell0'
