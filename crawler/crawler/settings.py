@@ -15,10 +15,11 @@ NEWSPIDER_MODULE = 'crawler.spiders'
 
 ITEM_PIPELINES = {
     'crawler.pipelines.MySQLPipeline': 301,
+    'crawler.middlewares.ProxyMiddleware': 101,
 }
 
-DOWNLOAD_DELAY = 3
-RANDOMIZE_DOWNLOAD_DELAY = True
+# DOWNLOAD_DELAY = 3
+# RANDOMIZE_DOWNLOAD_DELAY = True
 
 
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 \
