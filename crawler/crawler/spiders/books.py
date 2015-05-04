@@ -35,8 +35,6 @@ class BookSpider(scrapy.Spider):
         # Go to certain url for book details to get isbn
         xpath = "//div[@class='mod book-list']/dl/dt/a/@href"
         book_urls = sel.xpath(xpath).extract()
-        for url in book_urls:
-            yield Request(url, callback=self.parse_isbn)
 
         # Get next page and do it again
         more_page = sel.xpath("//span[@class='next']/a/@href").extract()[0]
@@ -48,6 +46,10 @@ class BookSpider(scrapy.Spider):
             else:
                 url = response.url + more_page
             yield Request(url, callback=self.parse)
+
+        for url in book_urls:
+            yield Request(url, callback=self.parse_isbn)
+
 
     def parse_isbn(self, response):
         sel = Selector(response)
