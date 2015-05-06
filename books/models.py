@@ -4,8 +4,6 @@ from django.db import models
 
 
 class Book(models.Model):
-    '''
-    '''
     title = models.CharField(max_length=150)
     subtitle = models.CharField(max_length=150, null=True)
     origin_title = models.CharField(max_length=150, null=True)
