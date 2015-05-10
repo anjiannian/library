@@ -10,9 +10,9 @@ def list(request):
     """
     This function is used to list all schools
     and the bookshelves pocessed
-
-    @TODO: use mapreduce or mysql join
+    TODO: bookshelf.name
     """
+
     schools = School.objects.all()
     bookshelves = BookShelf.objects.all()
     res = []

@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from bookshelves.models import BookShelf
+
+admin.site.register(BookShelf)

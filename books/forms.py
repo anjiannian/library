@@ -17,5 +17,5 @@ class UploadBook(forms.Form):
     author = forms.CharField(max_length=50, required=True)
     publisher = forms.CharField(max_length=100, required=True)
     published = forms.CharField(max_length=8, required=False)
-    description = forms.TextField(required=False)
-    meta = forms.TextField(required=False)
+    description = forms.CharField(required=False)
+    meta = forms.CharField(required=False)
