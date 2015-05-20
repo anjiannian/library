@@ -9,3 +9,9 @@ class School(models.Model):
     contact = models.CharField(max_length=50, null=True)
     contact_phone = models.CharField(max_length=30, null=True)
     extra = models.TextField(null=True)
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        db_table = 'school'
